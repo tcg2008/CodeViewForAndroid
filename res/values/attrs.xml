@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <declare-styleable name="CodeView">
+        <attr name="mode" format="string" />
+    </declare-styleable>
     <declare-styleable name="Highlight">
         <attr name="hlComment1" format="color" />
         <attr name="hlComment2" format="color" />

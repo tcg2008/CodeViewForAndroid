@@ -9,9 +9,12 @@ import com.jecelyin.editor.v2.highlight.jedit.StyleLoader;
 import com.jecelyin.editor.v2.ui.Document;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.text.SpannableStringBuilder;
 import android.util.AttributeSet;
 import android.widget.TextView;
+
+import cn.tcg.view.codeview.R;
 
 /**
  * 
@@ -19,6 +22,7 @@ import android.widget.TextView;
  */
 public class CodeView extends TextView
 {
+	private String name ;
 	/**
 	 * 
 	 */
@@ -40,17 +44,41 @@ public class CodeView extends TextView
 	 */
 	public CodeView(Context context, AttributeSet attrs, int defStyleAttr)
 	{
-		super(context, attrs );
+		super(context, attrs,defStyleAttr );
+		TypedArray a = null;
+		try
+		{
+			a = context.obtainStyledAttributes(attrs, R.styleable.CodeView);
+			if(a.hasValue(R.styleable.CodeView_mode))
+			{
+				name = a.getString(R.styleable.CodeView_mode);
+			}
+		} finally
+		{
+			a.recycle();
+		}
 		StyleLoader.loadStyles(context, attrs  );
 	}
 
-	 
+	/**
+	 *
+	 * @see com.jecelyin.editor.v2.highlight.jedit.modes.Catalog#modes
+	 * @param name
+	 */
+	public void setMode(String name)
+	{
+		this.name = name;
+	}
 
 	@Override
 	public void setText(CharSequence text, BufferType type)
 	{
+		if(name==null)
+		{
+			name="Java";
+		}
 		SpannableStringBuilder sb = new SpannableStringBuilder(text);
-		Document doc = new Document(this.getContext(), "Java");
+		Document doc = new Document(this.getContext(), name);
 		doc.highlight(sb);
 		super.setText(sb, type);
 	}
