@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Highlight">
+        <attr name="hlComment1" format="color" />
+        <attr name="hlComment2" format="color" />
+        <attr name="hlComment3" format="color" />
+        <attr name="hlComment4" format="color" />
+        <attr name="hlDigit" format="color" />
+        <attr name="hlFoldLine0" format="color" />
+        <attr name="hlFoldLine1" format="color" />
+        <attr name="hlFoldLine2" format="color" />
+        <attr name="hlFoldLine3" format="color" />
+        <attr name="hlFunction" format="color" />
+        <attr name="hlInvalid" format="color" />
+        <attr name="hlKeyword1" format="color" />
+        <attr name="hlKeyword2" format="color" />
+        <attr name="hlKeyword3" format="color" />
+        <attr name="hlKeyword4" format="color" />
+        <attr name="hlLabel" format="color" />
+        <attr name="hlLiteral1" format="color" />
+        <attr name="hlLiteral2" format="color" />
+        <attr name="hlLiteral3" format="color" />
+        <attr name="hlLiteral4" format="color" />
+        <attr name="hlMarkup" format="color" />
+        <attr name="hlOperator" format="color" /> 
+    </declare-styleable>
+
+    <attr name="HighlightStyle" format="reference" />
+
+    <style name="HighlightStyle">  
+        <!-- 高亮 -->
+        <item name="hlComment1">#BC9458</item>
+        <item name="hlComment2">#808080</item>
+        <item name="hlComment3">#888888</item>
+        <item name="hlComment4">#cc6600</item>
+        <item name="hlDigit">#d1001c</item>
+        <item name="hlFoldLine0">#000000</item>
+        <item name="hlFoldLine1">#000000</item>
+        <item name="hlFoldLine2">#000000</item>
+        <item name="hlFoldLine3">#000000</item>
+        <item name="hlFunction">#5c92b9</item>
+        <item name="hlInvalid">#ff0066</item>
+        <!-- 关键字 if true... -->
+        <item name="hlKeyword1">#ff7300</item>
+        <!-- 函数名 -->
+        <item name="hlKeyword2">#1d97b9</item>
+        <!-- 变量 -->
+        <item name="hlKeyword3">#cfa621</item>
+        <!-- 类名 -->
+        <item name="hlKeyword4">#0480f4</item>
+        <item name="hlLabel">#02b902</item>
+        <!-- 字符串,单引号 -->
+        <item name="hlLiteral1">#519F50</item>
+        <!-- 字符串,双引号 -->
+        <item name="hlLiteral2">#399138</item>
+        <item name="hlLiteral3">#519F50</item>
+        <item name="hlLiteral4">#9900cc</item>
+        <!-- 语言符号,如: <?php -->
+        <item name="hlMarkup">#E8BF6A</item>
+        <item name="hlOperator">#D0D0FF</item>
+    </style>
+
+</resources>
